@@ -4,7 +4,8 @@ spring:
     #url: jdbc:mysql://127.0.0.1:3306/advanced_jpa
     url: jdbc:mysql://azdb-mysql-02.mysql.database.azure.com:3306/advanced_jpa
     username: sri96
-    password: AzureSql@2024
+    #password: AzureSql@2024
+    password: ${dbPassword}
     ssl-mode: require
     #password: ParkView0502
 
@@ -16,3 +17,5 @@ logging:
         orm:
           jdbc:
             bind: TRACE
+vault:
+  url: https://advanced-jpa-keyvault.vault.azure.net/
